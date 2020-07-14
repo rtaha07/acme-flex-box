@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Layout</title>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"></link>
+</head>
+
+<body>
+
+  <header>
+    <div class="title">
+      <h1>Acme Layout</h1>
+    </div>
+    <nav>
+      <div class="nav-item">
+        <a href="#">Users</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Departments</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="users">
+    <h1>Users</h1>
+    <div class="form-wrap">
+        <form action="action_page.php">
+          <h2>Create A Users</h2>
+          <div class="row">
+          <label>First Name: <input type="text" name="firstname" placeholder="Your name.."></label>
+          <label>Last Name: <input type="text" name="lastname" placeholder="Your last name.."></label>
+          </div>
+          <div class="row">
+              <label>Department: <select id="department" name="department" ></label>
+                <option placeholder='--None--'></option>
+                <option value="sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Shipping-delivery">Shipping & Delivery</option>
+              </select>
+          </div>
+
+          <div class="row">
+            <input type="reset" value="Clear">
+            <input type="save" value="Save">
+          </div>
+        </form>
+    </div>
+
+    <div class="wrap">
+      <div class="user-profile">
+        <h2 class="user-name">Jone Deen</h2>
+        <p class="user-info">While not working with his team, John is busy entertaining his life's true passion: Ice Fishing.
+        </p>
+      </div>
+      <div class="user-profile">
+        <h2 class="user-name">Kim Yvonne</h2>
+        <p class="user-info">Kim's favorite languages include Scheme, Rust, Elm, Smalltalk, Haskell and Lisp.
+        </p>
+      </div>
+      <div class="user-profile">
+        <h2 class="user-name">Tom Morrison</h2>
+        <p class="user-info">Tom's life is full of adventures. He travelled all over the world.
+        </p>
+      </div>
+      <div class="user-profile">
+        <h2 class="user-name">Emmy Frank</h2>
+        <p class="user-info">Emmy loves working with spreadsheets. What doesn't Emmy love? Pretty much everything else.
+        </p>
+      </div>
+      <div class="user-profile">
+        <h2 class="user-name">Sarah Johnson</h2>
+        <p class="user-info">Sarah is responsible for creating delightful user experiences and clean, slick product interfaces.
+        </p>
+      </div>
+      <div class="user-profile">
+        <h2 class="user-name">Ellie Carson</h2>
+        <p class="user-info">Ellie graduated from Princeton University with a CS degree.
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  </footer>
+
+</body>
+
+</html>
