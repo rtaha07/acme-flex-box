@@ -4,6 +4,7 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: #f6f7f3;
 }
 
 p {
@@ -34,32 +35,30 @@ nav {
   width: 90%;
   padding: 10px;
   border-radius: 4px;
-  margin: 0rem 2rem;
+  margin: 1rem 0rem;
 }
 
-label {
+/* label {
   padding: 10px 20px;
   display: flex;
   justify-content: flex-start;
-}
+} */
 
 input[type=reset], input[type=save]{
   background-color: rgba(10, 102, 187, 0.8);
   text-align: center;
   line-height: 1.5em;
   color: white;
-  margin: 2em 0;
-  padding: 10px;
+  margin: .5em 0 .5em .5em;
+  padding: 10px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  /* float: center; */
 }
 
 section {
   display: flex;
-  flex-flow: column;
-  background-color: #f6f7f3;
+  flex-flow: column wrap;
 }
 
 section h2 {
@@ -82,7 +81,7 @@ nav {
 }
 
 nav a {
-  font-size: 1.3em;
+  font-size: 2em;
   color: #fff;
   text-decoration: none;
   padding: 5px;
@@ -97,11 +96,12 @@ nav a {
 
 .form-wrap {
   display: flex;
+  width: 50%;
   border-style: solid;
-  flex-direction: column;
+  flex-flow: column wrap;
   border-radius: 10px;
-  background-color: #c29f9f;
-  padding: 0 20px 30px;
+  background-color: #c9b5b5;
+  padding: 10px 10px;
 }
 .form-wrap h2{
   text-align: left;
@@ -111,6 +111,7 @@ nav a {
 .wrap {
   display: flex;
   flex-flow: row wrap;
+  margin: 2em 0;
   /* justify-content: space-between; */
 }
 
@@ -121,7 +122,7 @@ nav a {
   flex-flow: column wrap;
   border-radius: 10px;
   border-style: solid;
-  background-color: #63e9ee;
+  background-color: #b5e9eb;
   padding: 10px;
 }
 
@@ -133,19 +134,36 @@ nav a {
 
 .footer {
   width: 100vw;
-  height: 6em;
+  height: 5em;
+  margin-top: 5em;
   background-color: rgba(10, 102, 187, 0.8);
   color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  .nav {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+}
 
 @media screen and (max-width: 600px) {
-  .nav .nav-item .form-wrap, input[type=reset], input[type=save] {
+  .form-wrap, label{
     display: flex;
-    /* flex-direction: column; */
     flex-flow: column wrap;
-    /* width: 100%; */
-    margin-top: 1rem;
-    align-items: flex-start;
+    /* padding: 5px 30px 5px 5px; */
+    align-items: center;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  input[type=reset], input[type=save] {
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    /* margin-left: 10px; */
   }
 }
