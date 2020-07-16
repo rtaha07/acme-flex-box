@@ -3,23 +3,19 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  /* margin: 0px; */
-  flex-wrap: wrap;
   font-family: Helvetica, Arial, sans-serif;
-  width: calc(100% - 5em);
 }
 
 p {
   color: #252525;
   line-height: 1em;
   padding: 10px 10px;
-  /* position: inherit; */
 }
 
 h1 {
   font-size: 3em;
+  margin: 0;
+  padding: 1rem;
 }
 
 h2 {
@@ -36,18 +32,15 @@ nav {
 
 #department, input[type=text], select, textarea{
   width: 90%;
-  justify-content: flex-end;
   padding: 10px;
-  border: 1px solid rgb(25, 119, 33);
   border-radius: 4px;
-  box-sizing: border-box;
-  /* resize: vertical; */
+  margin: 0rem 2rem;
 }
 
 label {
-  padding: 10px 5px;
+  padding: 10px 20px;
   display: flex;
-  align-items: stretch;
+  justify-content: flex-start;
 }
 
 input[type=reset], input[type=save]{
@@ -55,7 +48,7 @@ input[type=reset], input[type=save]{
   text-align: center;
   line-height: 1.5em;
   color: white;
-  margin: .5em;
+  margin: 2em 0;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -65,58 +58,30 @@ input[type=reset], input[type=save]{
 
 section {
   display: flex;
-  flex-grow: column wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  /* box-sizing: border-box; */
+  flex-flow: column;
   background-color: #f6f7f3;
-  position: relative;
-  width: 100vw;
-  /* overflow: hidden; */
-  padding: 10px;
 }
+
 section h2 {
   text-align: center;
-  position: relative;
-  margin: 60px 0;
 }
 
 
 header {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  /* margin: 0 1em; */
-  padding: 20px;
-  width: 100vw;
+  padding: 5px;
   /* width: calc(100vw - 8em); */
   color: #fff;
   background-color: rgba(10, 102, 187, 0.8);
-  /* border-radius: 0 0 1em 1em; */
-  /*z-index: 2;*/
 }
 
-header .title {
-  flex-grow: 1;
-  /* padding-top: 0.25em; */
-}
-
-header nav {
+nav {
   display: flex;
-  flex-wrap: wrap;
-  /* flex-flow: row wrap; */
-  flex-direction: row;
-  align-content: center;
-  padding-right: 20px;
+  /* height: 1em; */
+  align-items: center;
+  justify-content: space-around;
 }
 
-.nav-item {
-  height: 1em;
-  margin: 0 1.5em 0 0;
-  align-items: stretch;
-}
-
-.nav-item a {
+nav a {
   font-size: 1.3em;
   color: #fff;
   text-decoration: none;
@@ -132,17 +97,11 @@ header nav {
 
 .form-wrap {
   display: flex;
-  /* width: 100%; */
   border-style: solid;
-  box-sizing: border-box;
   flex-direction: column;
-  Justify-content: space-around;
-  /* align-items: stretch; */
-  flex-wrap: wrap;
   border-radius: 10px;
   background-color: #c29f9f;
-  padding: 20px;
-  position: inherit;
+  padding: 0 20px 30px;
 }
 .form-wrap h2{
   text-align: left;
@@ -151,20 +110,15 @@ header nav {
 
 .wrap {
   display: flex;
-  flex-wrap: wrap;
-  /* flex-flow: row wrap; */
+  flex-flow: row wrap;
   /* justify-content: space-between; */
-  flex-direction: row;
-  /* align-content: center; */
-  /* padding-right: 20px; */
 }
+
 .user-profile{
-  display: inline-flex;
-  flex-direction: column;
-  /* align-content: stretch; */
+  flex: auto;
+  display: flex;
+  align-content: space-around;
   flex-flow: column wrap;
-  flex-wrap: wrap;
-  flex-grow: 0 0 33%;
   border-radius: 10px;
   border-style: solid;
   background-color: #63e9ee;
@@ -172,27 +126,10 @@ header nav {
 }
 
 .user-profile .user-info {
-  /* width: calc(100% - 5em); */
-  margin-left: 2.5em;
   text-align: center;
   font-style: italic;
 }
 
-/* .col-text {
-  float: left;
-  width: 25%;
-  margin-top: 4px;
-} */
-
-/* .col-input {
-  float: left;
-  width: 100%;
-  margin-top: 2px 4px 5px;
-} */
-
- .flex {
-  display: flex;
-}
 
 .footer {
   width: 100vw;
@@ -201,19 +138,14 @@ header nav {
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .flex {
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 0 15px;
-  }
-}
 
 @media screen and (max-width: 600px) {
-  .nav-item .form-wrap, input[type=reset], input[type=save] {
+  .nav .nav-item .form-wrap, input[type=reset], input[type=save] {
+    display: flex;
+    /* flex-direction: column; */
     flex-flow: column wrap;
-    width: 100%;
-    margin-top: 0;
-    align-items: center;
+    /* width: 100%; */
+    margin-top: 1rem;
+    align-items: flex-start;
   }
 }
