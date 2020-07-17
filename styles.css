@@ -17,6 +17,7 @@ h1 {
   font-size: 3em;
   margin: 0;
   padding: 1rem;
+  /* width: 25%; */
 }
 
 h2 {
@@ -37,12 +38,6 @@ nav {
   border-radius: 4px;
   margin: 1rem 0rem;
 }
-
-/* label {
-  padding: 10px 20px;
-  display: flex;
-  justify-content: flex-start;
-} */
 
 input[type=reset], input[type=save]{
   background-color: rgba(10, 102, 187, 0.8);
@@ -68,16 +63,19 @@ section h2 {
 
 header {
   padding: 5px;
-  /* width: calc(100vw - 8em); */
   color: #fff;
   background-color: rgba(10, 102, 187, 0.8);
 }
 
 nav {
   display: flex;
-  /* height: 1em; */
   align-items: center;
+}
+
+.main-nav{
+  display:flex;
   justify-content: space-around;
+  width: 75%;
 }
 
 nav a {
@@ -100,7 +98,7 @@ nav a {
   border-style: solid;
   flex-flow: column wrap;
   border-radius: 10px;
-  background-color: #c9b5b5;
+  background-color: #d4caca;
   padding: 10px 10px;
 }
 .form-wrap h2{
@@ -111,18 +109,18 @@ nav a {
 .wrap {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   margin: 2em 0;
-  /* justify-content: space-between; */
 }
 
 .user-profile{
   flex: auto;
   display: flex;
-  align-content: space-around;
+  /* align-content: space-around; */
   flex-flow: column wrap;
   border-radius: 10px;
   border-style: solid;
-  background-color: #b5e9eb;
+  background-color: #d7f1f1;
   padding: 10px;
 }
 
@@ -141,9 +139,10 @@ nav a {
 }
 
 @media screen and (max-width: 600px) {
-  .nav {
-    align-items: center;
-    justify-content: space-around;
+  .main-nav .title{
+    align-items: flex-start;
+    flex-flow: column wrap;
+    justify-content: flex-end;
   }
 
 }
@@ -152,7 +151,6 @@ nav a {
   .form-wrap, label{
     display: flex;
     flex-flow: column wrap;
-    /* padding: 5px 30px 5px 5px; */
     align-items: center;
     width: 100%;
   }
@@ -164,6 +162,5 @@ nav a {
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    /* margin-left: 10px; */
   }
 }
